@@ -1,0 +1,888 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".chessBoard">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TableLayout
+            android:id="@+id/pecesBlanques"
+            android:layout_width="304dp"
+            android:layout_height="19dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TableRow
+                android:id="@+id/blanques0"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/blanques_0"
+                    android:layout_width="19dp"
+                    android:layout_height="19dp"
+                    android:background="@color/blanquesL"
+                    android:onClick="clickPeca"
+                    android:tag="00" />
+
+                <ImageView
+                    android:id="@+id/blanques_1"
+                    android:layout_width="19dp"
+                    android:layout_height="19dp"
+                    android:background="@color/blanquesH"
+                    android:onClick="clickPeca"
+                    android:tag="01" />
+
+                <ImageView
+                    android:id="@+id/blanques_2"
+                    android:layout_width="19dp"
+                    android:layout_height="19dp"
+                    android:background="@color/blanquesL"
+                    android:onClick="clickPeca"
+                    android:tag="02" />
+
+                <ImageView
+                    android:id="@+id/blanques_3"
+                    android:layout_width="19dp"
+                    android:layout_height="19dp"
+                    android:background="@color/blanquesH"
+                    android:onClick="clickPeca"
+                    android:tag="03" />
+
+                <ImageView
+                    android:id="@+id/blanques_4"
+                    android:layout_width="19dp"
+                    android:layout_height="19dp"
+                    android:background="@color/blanquesL"
+                    android:onClick="clickPeca"
+                    android:tag="04" />
+
+                <ImageView
+                    android:id="@+id/blanques_5"
+                    android:layout_width="19dp"
+                    android:layout_height="19dp"
+                    android:background="@color/blanquesH"
+                    android:onClick="clickPeca"
+                    android:tag="05" />
+
+                <ImageView
+                    android:id="@+id/blanques_6"
+                    android:layout_width="19dp"
+                    android:layout_height="19dp"
+                    android:background="@color/blanquesL"
+                    android:onClick="clickPeca"
+                    android:tag="06" />
+
+                <ImageView
+                    android:id="@+id/blanques_7"
+                    android:layout_width="19dp"
+                    android:layout_height="19dp"
+                    android:background="@color/blanquesH"
+                    android:onClick="clickPeca"
+                    android:tag="07" />
+
+
+                <ImageView
+                    android:id="@+id/blanques_8"
+                    android:layout_width="19dp"
+                    android:layout_height="19dp"
+                    android:background="@color/blanquesL"
+                    android:onClick="clickPeca"
+                    android:tag="10" />
+
+                <ImageView
+                    android:id="@+id/blanques_9"
+                    android:layout_width="19dp"
+                    android:layout_height="19dp"
+                    android:background="@color/blanquesH"
+                    android:onClick="clickPeca"
+                    android:tag="11" />
+
+                <ImageView
+                    android:id="@+id/blanques_10"
+                    android:layout_width="19dp"
+                    android:layout_height="19dp"
+                    android:background="@color/blanquesL"
+                    android:onClick="clickPeca"
+                    android:tag="12" />
+
+                <ImageView
+                    android:id="@+id/blanques_11"
+                    android:layout_width="19dp"
+                    android:layout_height="19dp"
+                    android:background="@color/blanquesH"
+                    android:onClick="clickPeca"
+                    android:tag="13" />
+
+                <ImageView
+                    android:id="@+id/blanques_12"
+                    android:layout_width="19dp"
+                    android:layout_height="19dp"
+                    android:background="@color/blanquesL"
+                    android:onClick="clickPeca"
+                    android:tag="14" />
+
+                <ImageView
+                    android:id="@+id/blanques_13"
+                    android:layout_width="19dp"
+                    android:layout_height="19dp"
+                    android:background="@color/blanquesH"
+                    android:onClick="clickPeca"
+                    android:tag="15" />
+
+                <ImageView
+                    android:id="@+id/blanques_14"
+                    android:layout_width="19dp"
+                    android:layout_height="19dp"
+                    android:background="@color/blanquesL"
+                    android:onClick="clickPeca"
+                    android:tag="16" />
+
+                <ImageView
+                    android:id="@+id/blanques_15"
+                    android:layout_width="19dp"
+                    android:layout_height="19dp"
+                    android:background="@color/blanquesH"
+                    android:onClick="clickPeca"
+                    android:tag="17" />
+            </TableRow>
+
+        </TableLayout>
+
+        <TableLayout
+            android:id="@+id/chessBoard"
+            android:layout_width="304dp"
+            android:layout_height="304dp"
+            android:layout_marginTop="80dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pecesBlanques">
+
+            <TableRow
+                android:id="@+id/row0"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/board_0_0"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:background="@color/boardL"
+                    android:onClick="clickPeca"
+                    android:tag="00" />
+
+                <ImageView
+                    android:id="@+id/board_0_1"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:background="@color/boardH"
+                    android:onClick="clickPeca"
+                    android:tag="01" />
+
+                <ImageView
+                    android:id="@+id/board_0_2"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:background="@color/boardL"
+                    android:onClick="clickPeca"
+                    android:tag="02" />
+
+                <ImageView
+                    android:id="@+id/board_0_3"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:background="@color/boardH"
+                    android:onClick="clickPeca"
+                    android:tag="03" />
+
+                <ImageView
+                    android:id="@+id/board_0_4"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:background="@color/boardL"
+                    android:onClick="clickPeca"
+                    android:tag="04" />
+
+                <ImageView
+                    android:id="@+id/board_0_5"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:background="@color/boardH"
+                    android:onClick="clickPeca"
+                    android:tag="05" />
+
+                <ImageView
+                    android:id="@+id/board_0_6"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:background="@color/boardL"
+                    android:onClick="clickPeca"
+                    android:tag="06" />
+
+                <ImageView
+                    android:id="@+id/board_0_7"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:background="@color/boardH"
+                    android:onClick="clickPeca"
+                    android:tag="07" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/row1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/board_1_0"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:background="@color/boardH"
+                    android:onClick="clickPeca"
+                    android:tag="10" />
+
+                <ImageView
+                    android:id="@+id/board_1_1"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:background="@color/boardL"
+                    android:onClick="clickPeca"
+                    android:tag="11" />
+
+                <ImageView
+                    android:id="@+id/board_1_2"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:background="@color/boardH"
+                    android:onClick="clickPeca"
+                    android:tag="12" />
+
+                <ImageView
+                    android:id="@+id/board_1_3"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:background="@color/boardL"
+                    android:onClick="clickPeca"
+                    android:tag="13" />
+
+                <ImageView
+                    android:id="@+id/board_1_4"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:background="@color/boardH"
+                    android:onClick="clickPeca"
+                    android:tag="14" />
+
+                <ImageView
+                    android:id="@+id/board_1_5"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:background="@color/boardL"
+                    android:onClick="clickPeca"
+                    android:tag="15" />
+
+                <ImageView
+                    android:id="@+id/board_1_6"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:background="@color/boardH"
+                    android:onClick="clickPeca"
+                    android:tag="16" />
+
+                <ImageView
+                    android:id="@+id/board_1_7"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:background="@color/boardL"
+                    android:onClick="clickPeca"
+                    android:tag="17" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/row2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/board_2_0"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:background="@color/boardL"
+                    android:onClick="clickPeca"
+                    android:tag="20" />
+
+                <ImageView
+                    android:id="@+id/board_2_1"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:background="@color/boardH"
+                    android:onClick="clickPeca"
+                    android:tag="21" />
+
+                <ImageView
+                    android:id="@+id/board_2_2"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:background="@color/boardL"
+                    android:onClick="clickPeca"
+                    android:tag="22" />
+
+                <ImageView
+                    android:id="@+id/board_2_3"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:background="@color/boardH"
+                    android:onClick="clickPeca"
+                    android:tag="23" />
+
+                <ImageView
+                    android:id="@+id/board_2_4"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:background="@color/boardL"
+                    android:onClick="clickPeca"
+                    android:tag="24" />
+
+                <ImageView
+                    android:id="@+id/board_2_5"
+                    android:layout_width="38dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/boardH"
+                    android:onClick="clickPeca"
+                    android:tag="25" />
+
+                <ImageView
+                    android:id="@+id/board_2_6"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:background="@color/boardL"
+                    android:onClick="clickPeca"
+                    android:tag="26" />
+
+                <ImageView
+                    android:id="@+id/board_2_7"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:background="@color/boardH"
+                    android:onClick="clickPeca"
+                    android:tag="27" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/row3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/board_3_0"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:background="@color/boardH"
+                    android:onClick="clickPeca"
+                    android:tag="30" />
+
+                <ImageView
+                    android:id="@+id/board_3_1"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:background="@color/boardL"
+                    android:onClick="clickPeca"
+                    android:tag="31" />
+
+                <ImageView
+                    android:id="@+id/board_3_2"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:background="@color/boardH"
+                    android:onClick="clickPeca"
+                    android:tag="32" />
+
+                <ImageView
+                    android:id="@+id/board_3_3"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:background="@color/boardL"
+                    android:onClick="clickPeca"
+                    android:tag="33" />
+
+                <ImageView
+                    android:id="@+id/board_3_4"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:background="@color/boardH"
+                    android:onClick="clickPeca"
+                    android:tag="34" />
+
+                <ImageView
+                    android:id="@+id/board_3_5"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:background="@color/boardL"
+                    android:onClick="clickPeca"
+                    android:tag="35" />
+
+                <ImageView
+                    android:id="@+id/board_3_6"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:background="@color/boardH"
+                    android:onClick="clickPeca"
+                    android:tag="36" />
+
+                <ImageView
+                    android:id="@+id/board_3_7"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:background="@color/boardL"
+                    android:onClick="clickPeca"
+                    android:tag="37" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/row4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/board_4_0"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:background="@color/boardL"
+                    android:onClick="clickPeca"
+                    android:tag="40" />
+
+                <ImageView
+                    android:id="@+id/board_4_1"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:background="@color/boardH"
+                    android:onClick="clickPeca"
+                    android:tag="41" />
+
+                <ImageView
+                    android:id="@+id/board_4_2"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:background="@color/boardL"
+                    android:onClick="clickPeca"
+                    android:tag="42" />
+
+                <ImageView
+                    android:id="@+id/board_4_3"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:background="@color/boardH"
+                    android:onClick="clickPeca"
+                    android:tag="43" />
+
+                <ImageView
+                    android:id="@+id/board_4_4"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:background="@color/boardL"
+                    android:onClick="clickPeca"
+                    android:tag="44" />
+
+                <ImageView
+                    android:id="@+id/board_4_5"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:background="@color/boardH"
+                    android:onClick="clickPeca"
+                    android:tag="45" />
+
+                <ImageView
+                    android:id="@+id/board_4_6"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:background="@color/boardL"
+                    android:onClick="clickPeca"
+                    android:tag="46" />
+
+                <ImageView
+                    android:id="@+id/board_4_7"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:background="@color/boardH"
+                    android:onClick="clickPeca"
+                    android:tag="47" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/row5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/board_5_0"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:background="@color/boardH"
+                    android:onClick="clickPeca"
+                    android:tag="50" />
+
+                <ImageView
+                    android:id="@+id/board_5_1"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:background="@color/boardL"
+                    android:onClick="clickPeca"
+                    android:tag="51" />
+
+                <ImageView
+                    android:id="@+id/board_5_2"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:background="@color/boardH"
+                    android:onClick="clickPeca"
+                    android:tag="52" />
+
+                <ImageView
+                    android:id="@+id/board_5_3"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:background="@color/boardL"
+                    android:onClick="clickPeca"
+                    android:tag="53" />
+
+                <ImageView
+                    android:id="@+id/board_5_4"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:background="@color/boardH"
+                    android:onClick="clickPeca"
+                    android:tag="54" />
+
+                <ImageView
+                    android:id="@+id/board_5_5"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:background="@color/boardL"
+                    android:onClick="clickPeca"
+                    android:tag="55" />
+
+                <ImageView
+                    android:id="@+id/board_5_6"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:background="@color/boardH"
+                    android:onClick="clickPeca"
+                    android:tag="56" />
+
+                <ImageView
+                    android:id="@+id/board_5_7"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:background="@color/boardL"
+                    android:onClick="clickPeca"
+                    android:tag="57" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/row6"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/board_6_0"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:background="@color/boardL"
+                    android:onClick="clickPeca"
+                    android:tag="60" />
+
+                <ImageView
+                    android:id="@+id/board_6_1"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:background="@color/boardH"
+                    android:onClick="clickPeca"
+                    android:tag="61" />
+
+                <ImageView
+                    android:id="@+id/board_6_2"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:background="@color/boardL"
+                    android:onClick="clickPeca"
+                    android:tag="62" />
+
+                <ImageView
+                    android:id="@+id/board_6_3"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:background="@color/boardH"
+                    android:onClick="clickPeca"
+                    android:tag="63" />
+
+                <ImageView
+                    android:id="@+id/board_6_4"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:background="@color/boardL"
+                    android:onClick="clickPeca"
+                    android:tag="64" />
+
+                <ImageView
+                    android:id="@+id/board_6_5"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:background="@color/boardH"
+                    android:onClick="clickPeca"
+                    android:tag="65" />
+
+                <ImageView
+                    android:id="@+id/board_6_6"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:background="@color/boardL"
+                    android:onClick="clickPeca"
+                    android:tag="66" />
+
+                <ImageView
+                    android:id="@+id/board_6_7"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:background="@color/boardH"
+                    android:onClick="clickPeca"
+                    android:tag="67" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/row7"
+                android:layout_width="match_parent"
+                android:layout_height="38dp">
+
+                <ImageView
+                    android:id="@+id/board_7_0"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:background="@color/boardH"
+                    android:clickable="true"
+                    android:onClick="clickPeca"
+                    android:tag="70" />
+
+                <ImageView
+                    android:id="@+id/board_7_1"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:background="@color/boardL"
+                    android:onClick="clickPeca"
+                    android:tag="71" />
+
+                <ImageView
+                    android:id="@+id/board_7_2"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:background="@color/boardH"
+                    android:onClick="clickPeca"
+                    android:tag="72" />
+
+                <ImageView
+                    android:id="@+id/board_7_3"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:background="@color/boardL"
+                    android:onClick="clickPeca"
+                    android:tag="73" />
+
+                <ImageView
+                    android:id="@+id/board_7_4"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:background="@color/boardH"
+                    android:onClick="clickPeca"
+                    android:tag="74" />
+
+                <ImageView
+                    android:id="@+id/board_7_5"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:background="@color/boardL"
+                    android:onClick="clickPeca"
+                    android:tag="75" />
+
+                <ImageView
+                    android:id="@+id/board_7_6"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:background="@color/boardH"
+                    android:onClick="clickPeca"
+                    android:tag="76" />
+
+                <ImageView
+                    android:id="@+id/board_7_7"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:background="@color/boardL"
+                    android:onClick="clickPeca"
+                    android:tag="77" />
+            </TableRow>
+
+        </TableLayout>
+
+        <TableLayout
+            android:id="@+id/pecesNegres"
+            android:layout_width="304dp"
+            android:layout_height="19dp"
+            android:layout_marginTop="80dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/chessBoard">
+
+            <TableRow
+                android:id="@+id/negres0"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/negres_0_0"
+                    android:layout_width="19dp"
+                    android:layout_height="19dp"
+                    android:background="@color/negresL"
+                    android:onClick="clickPeca"
+                    android:tag="00" />
+
+                <ImageView
+                    android:id="@+id/negres_0_1"
+                    android:layout_width="19dp"
+                    android:layout_height="19dp"
+                    android:background="@color/negresH"
+                    android:onClick="clickPeca"
+                    android:tag="01" />
+
+                <ImageView
+                    android:id="@+id/negres_0_2"
+                    android:layout_width="19dp"
+                    android:layout_height="19dp"
+                    android:background="@color/negresL"
+                    android:onClick="clickPeca"
+                    android:tag="02" />
+
+                <ImageView
+                    android:id="@+id/negres_0_3"
+                    android:layout_width="19dp"
+                    android:layout_height="19dp"
+                    android:background="@color/negresH"
+                    android:onClick="clickPeca"
+                    android:tag="03" />
+
+                <ImageView
+                    android:id="@+id/negres_0_4"
+                    android:layout_width="19dp"
+                    android:layout_height="19dp"
+                    android:background="@color/negresL"
+                    android:onClick="clickPeca"
+                    android:tag="04" />
+
+                <ImageView
+                    android:id="@+id/negres_0_5"
+                    android:layout_width="19dp"
+                    android:layout_height="19dp"
+                    android:background="@color/negresH"
+                    android:onClick="clickPeca"
+                    android:tag="05" />
+
+                <ImageView
+                    android:id="@+id/negres_0_6"
+                    android:layout_width="19dp"
+                    android:layout_height="19dp"
+                    android:background="@color/negresL"
+                    android:onClick="clickPeca"
+                    android:tag="06" />
+
+                <ImageView
+                    android:id="@+id/negres_0_7"
+                    android:layout_width="19dp"
+                    android:layout_height="19dp"
+                    android:background="@color/negresH"
+                    android:onClick="clickPeca"
+                    android:tag="07" />
+
+                <ImageView
+                    android:id="@+id/negres_1_1"
+                    android:layout_width="19dp"
+                    android:layout_height="19dp"
+                    android:background="@color/negresL"
+                    android:onClick="clickPeca"
+                    android:tag="11" />
+
+                <ImageView
+                    android:id="@+id/negres_1_4"
+                    android:layout_width="19dp"
+                    android:layout_height="19dp"
+                    android:background="@color/negresH"
+                    android:onClick="clickPeca"
+                    android:tag="14" />
+
+                <ImageView
+                    android:id="@+id/negres_1_3"
+                    android:layout_width="19dp"
+                    android:layout_height="19dp"
+                    android:background="@color/negresL"
+                    android:onClick="clickPeca"
+                    android:tag="13" />
+
+                <ImageView
+                    android:id="@+id/negres_1_6"
+                    android:layout_width="19dp"
+                    android:layout_height="19dp"
+                    android:background="@color/negresH"
+                    android:onClick="clickPeca"
+                    android:tag="16" />
+
+                <ImageView
+                    android:id="@+id/negres_1_5"
+                    android:layout_width="19dp"
+                    android:layout_height="19dp"
+                    android:background="@color/negresL"
+                    android:onClick="clickPeca"
+                    android:tag="15" />
+
+                <ImageView
+                    android:id="@+id/negres_1_7"
+                    android:layout_width="19dp"
+                    android:layout_height="19dp"
+                    android:background="@color/negresH"
+                    android:onClick="clickPeca"
+                    android:tag="17" />
+
+                <ImageView
+                    android:id="@+id/negres_1_2"
+                    android:layout_width="19dp"
+                    android:layout_height="19dp"
+                    android:background="@color/negresL"
+                    android:onClick="clickPeca"
+                    android:tag="12" />
+
+                <ImageView
+                    android:id="@+id/negres_1_0"
+                    android:layout_width="19dp"
+                    android:layout_height="19dp"
+                    android:background="@color/negresH"
+                    android:onClick="clickPeca"
+                    android:tag="10" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/negres1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </TableRow>
+
+        </TableLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
